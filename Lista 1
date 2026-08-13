@@ -18,5 +18,24 @@ int main(int argc, char *argv[]) {
 	
 	printf("%d \n %d", primeiro, segundo);
 	
-	return 0;
-}
+
+	int numero;
+	
+	printf("\nInsira um valor real");
+	scanf("%lf", &numero);
+	printf("Notação cientifica: %\n", numero);
+	
+	
+	int primeiro, segundo, terceiro, quarto;
+    
+	printf("Insira o primeiro valor");
+	scanf ("%d", &primeiro);
+	printf("Insira o segundo valor");
+	scanf("%d", &segundo);
+	printf("Insira o terceiro valor");
+	scanf ("%d", &primeiro);
+	printf("Insira o quarto valor");
+	scanf("%d", &segundo);
+	
+	float primeiro, segundo, terceiro, quarto;
+	float resultado;
