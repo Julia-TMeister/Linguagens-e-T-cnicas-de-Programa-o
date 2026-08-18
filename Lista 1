@@ -17,7 +17,23 @@ int main(int argc, char *argv[]) {
 	segundo = aux; 
 	
 	printf("%d \n %d", primeiro, segundo);
-	
+
+
+
+	double salario, vendas, comissao, total;
+
+    printf("Digite o salario fixo: R$ ");
+    scanf("%lf", &salario);
+
+    printf("Digite o valor total de vendas: R$ ");
+    scanf("%lf", &vendas);
+
+    comissao = vendas * 0.15;
+    total = salario + comissao;
+
+    printf("TOTAL = R$ %.2lf\n", total);
+
+
 
 	int numero;
 	
@@ -39,3 +55,6 @@ int main(int argc, char *argv[]) {
 	
 	float primeiro, segundo, terceiro, quarto;
 	float resultado;
+
+
+
