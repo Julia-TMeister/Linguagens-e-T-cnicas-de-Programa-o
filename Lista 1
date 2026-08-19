@@ -1,10 +1,10 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
 	
+	//1
 	int primeiro, segundo, aux;
 	
 	printf("Insira o primeiro valor");
@@ -16,13 +16,39 @@ int main(int argc, char *argv[]) {
 	primeiro = segundo;
 	segundo = aux; 
 	
-	printf("%d \n %d", primeiro, segundo);
+	printf("%d \n %d\n", primeiro, segundo);
+	
+	
+	//3
+    int n, resultado, bit_64, bit_32, bit_16, bit_8, bit_4, bit_2;
+    printf("\nEntre com o valor para para a conversao: ");
+    scanf("%d", &n);
+    
+    bit_64 = n%2;
+    resultado = n/2;
+    
+    bit_32 = resultado%2;
+    resultado = resultado/2;
+    
+    bit_16 = resultado%2;
+    resultado = resultado/2;
+    
+    bit_8 = resultado%2;
+    resultado = resultado/2;
+    
+    bit_4 = resultado%2;
+    resultado = resultado/2;
+    
+    bit_2 = resultado%2;
+    resultado = resultado/2;
+    
+    printf("O numero %d em binário = %d%d%d%d%d%d%d\n", n, resultado%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
+    
+    
+    //4
+    double salario, vendas, comissao, total;
 
-
-
-	double salario, vendas, comissao, total;
-
-    printf("Digite o salario fixo: R$ ");
+    printf("\nDigite o salario fixo: R$ ");
     scanf("%lf", &salario);
 
     printf("Digite o valor total de vendas: R$ ");
@@ -32,29 +58,8 @@ int main(int argc, char *argv[]) {
     total = salario + comissao;
 
     printf("TOTAL = R$ %.2lf\n", total);
-
-
-
-	int numero;
-	
-	printf("\nInsira um valor real");
-	scanf("%lf", &numero);
-	printf("Notação cientifica: %\n", numero);
-	
-	
-	int primeiro, segundo, terceiro, quarto;
     
-	printf("Insira o primeiro valor");
-	scanf ("%d", &primeiro);
-	printf("Insira o segundo valor");
-	scanf("%d", &segundo);
-	printf("Insira o terceiro valor");
-	scanf ("%d", &primeiro);
-	printf("Insira o quarto valor");
-	scanf("%d", &segundo);
-	
-	float primeiro, segundo, terceiro, quarto;
-	float resultado;
 
 
-
+	return 0;
+}
