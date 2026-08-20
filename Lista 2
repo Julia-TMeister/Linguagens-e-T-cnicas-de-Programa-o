@@ -4,7 +4,8 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	
+
+    
     int idade, anoAtual, anoNascimento;
 
     printf("Digite sua idade: ");
@@ -17,7 +18,7 @@ int main(int argc, char *argv[]) {
 
     printf("Ano de nascimento: %d\n", anoNascimento);
 
-
+    
     float kmh, ms;
 
     printf("Digite a velocidade em km/h: ");
