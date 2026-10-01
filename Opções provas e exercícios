@@ -1,0 +1,583 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Esoft A 
+//Exercicio 0
+void exercicioEsoftA0() {
+
+    int n1, n2, n3, n4;
+
+    printf("EXERCICIO 0 \n");
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &n1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &n2);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%d", &n3);
+
+    printf("Digite o quarto numero: ");
+    scanf("%d", &n4);
+
+    printf("Numeros impares:\n");
+
+    if (n1 % 2 != 0) {
+        printf("%d ", n1);
+    }
+
+    if (n2 % 2 != 0) {
+        printf("%d ", n2);
+    }
+
+    if (n3 % 2 != 0) {
+        printf("%d ", n3);
+    }
+
+    if (n4 % 2 != 0) {
+        printf("%d ", n4);
+    }
+
+    printf("Multiplos de 5:\n");
+
+    if (n1 % 5 == 0) {
+        printf("%d ", n1);
+    }
+
+    if (n2 % 5 == 0) {
+        printf("%d ", n2);
+    }
+
+    if (n3 % 5 == 0) {
+        printf("%d ", n3);
+    }
+
+    if (n4 % 5 == 0) {
+        printf("%d ", n4);
+    }
+
+}
+//Exercicio 1
+void exercicioEsoftA1() {
+
+    int itens;
+    int capacidade;
+
+    printf("EXERCICIO 1\n");
+
+    printf("Digite a quantidade total de itens: ");
+    scanf("%d", &itens);
+
+    printf("Digite a capacidade de cada mochila: ");
+    scanf("%d", &capacidade);
+
+    printf("\nMochilas totalmente preenchidas: %d\n",
+           itens / capacidade);
+
+    printf("Itens que sobraram: %d\n", itens % capacidade);
+}
+
+//Exercicio 2
+void exercicioEsoftA2() {
+
+    float valor;
+    float resultado;
+    int codigo;
+
+    printf("EXERCICIO 2 \n");
+
+    printf("Digite o valor a ser convertido: ");
+    scanf("%f", &valor);
+
+    printf("Escolha a unidade de conversao:\n");
+
+    printf("1  - Celsius para Fahrenheit\n");
+    printf("2  - Fahrenheit para Celsius\n");
+    printf("3  - Celsius para Kelvin\n");
+    printf("4  - Kelvin para Celsius\n");
+    printf("5  - Metro para Milha\n");
+    printf("6  - Milha para Metro\n");
+    printf("8  - Quilograma para Libra\n");
+    printf("9  - Libra para Quilograma\n");
+    printf("10 - Km/h para Mph\n");
+    printf("11 - Mph para Km/h\n");
+
+    printf("Digite o numero da sua escolha: ");
+    scanf("%d", &codigo);
+
+    switch (codigo) {
+
+        case 1:
+            resultado = valor * 1.8 + 32;
+            printf("Resultado: %.2f Fahrenheit\n", resultado);
+            break;
+
+
+        case 2:
+            resultado = (valor - 32) / 1.8;
+            printf("Resultado: %.2f Celsius\n", resultado);
+            break;
+
+
+        case 3:
+            resultado = valor + 273.15;
+            printf("Resultado: %.2f Kelvin\n", resultado);
+            break;
+
+
+        case 4:
+            resultado = valor - 273.15;
+            printf("Resultado: %.2f Celsius\n", resultado);
+            break;
+
+
+        case 5:
+            resultado = valor / 1609.34;
+            printf("Resultado: %.6f milhas\n", resultado);
+            break;
+
+
+        case 6:
+            resultado = valor * 1609.34;
+            printf("Resultado: %.2f metros\n", resultado);
+            break;
+
+
+        case 8:
+            resultado = valor * 2.205;
+            printf("Resultado: %.2f libras\n", resultado);
+            break;
+
+
+        case 9:
+            resultado = valor / 2.205;
+            printf("Resultado: %.2f quilogramas\n", resultado);
+            break;
+
+
+        case 10:
+            resultado = valor / 1.609;
+            printf("Resultado: %.2f mph\n", resultado);
+            break;
+
+
+        case 11:
+            resultado = valor * 1.609;
+            printf("Resultado: %.2f km/h\n", resultado);
+            break;
+
+
+        default:
+            printf("Unidade de medida nao existe no sistema.\n");
+    }
+}
+
+//Prova EsoftB
+//Exercico 0
+void exercicioEsoftB0() {
+
+    int itens;
+    int capacidade;
+
+    printf("EXERCICIO 0");
+
+    printf("Digite a quantidade total de itens: ");
+    scanf("%d", &itens);
+
+    printf("Digite a capacidade de cada mochila: ");
+    scanf("%d", &capacidade);
+
+    printf("Mochilas totalmente preenchidas: %d\n",
+           itens / capacidade);
+
+    printf("Itens que sobraram: %d\n", itens % capacidade);
+}
+
+//Exercicio 1
+void exercicioEsoftB1() {
+
+    int a, b, c;
+
+    printf("EXERCICIO 1");
+
+    printf("Digite o valor de a: ");
+    scanf("%d", &a);
+
+    printf("Digite o valor de b: ");
+    scanf("%d", &b);
+
+    printf("Digite o valor de c: ");
+    scanf("%d", &c);
+
+
+    if (a == b || a == c || b == c) {
+
+        printf("Os numeros tem que ser distintos\n");
+
+    }
+    else if (a < b && b < c) {
+
+        printf("%d %d %d\n", a, b, c);
+
+    }
+    else if (a < c && c < b) {
+
+        printf("%d %d %d\n", a, c, b);
+
+    }
+    else if (b < a && a < c) {
+
+        printf("%d %d %d\n", b, a, c);
+
+    }
+    else if (b < c && c < a) {
+
+        printf("%d %d %d\n", b, c, a);
+
+    }
+    else if (c < a && a < b) {
+
+        printf("%d %d %d\n", c, a, b);
+
+    }
+    else {
+
+        printf("%d %d %d\n", c, b, a);
+
+    }
+}
+
+//Exercicio 2
+void exercicioEsoftB2() {
+
+    int valor1;
+    int valor2;
+    int codigo;
+
+    printf("EXERCICIO 2 \n");
+
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &valor1);
+
+    printf("Digite o segundo valor: ");
+    scanf("%d", &valor2);
+
+    printf("\n");
+    printf("1 - Maior que (>)\n");
+    printf("2 - Menor que (<)\n");
+    printf("3 - Igual (==)\n");
+    printf("4 - Diferente (!=)\n");
+
+    printf("\nDigite o codigo da operacao: ");
+    scanf("%d", &codigo);
+
+
+    switch (codigo) {
+
+        case 1:
+
+            if (valor1 > valor2) {
+                printf("Verdadeiro\n");
+            }
+            else {
+                printf("Falso\n");
+            }
+
+            break;
+
+
+        case 2:
+
+            if (valor1 < valor2) {
+                printf("Verdadeiro\n");
+            }
+            else {
+                printf("Falso\n");
+            }
+
+            break;
+
+
+        case 3:
+
+            if (valor1 == valor2) {
+                printf("Verdadeiro\n");
+            }
+            else {
+                printf("Falso\n");
+            }
+
+            break;
+
+
+        case 4:
+
+            if (valor1 != valor2) {
+                printf("Verdadeiro\n");
+            }
+            else {
+                printf("Falso\n");
+            }
+
+            break;
+
+
+        default:
+
+            printf("operador invalido\n");
+    }
+}
+
+//Prova Ads
+//Exercicio 0
+void exercicioAds0() {
+
+    printf("EXERCICIO 0 \n");
+
+    int n1, n2, n3, n4, n5;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &n1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &n2);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%d", &n3);
+
+    printf("Digite o quarto numero: ");
+    scanf("%d", &n4);
+
+    printf("Digite o quinto numero: ");
+    scanf("%d", &n5);
+
+    if (n2 == n1 + 1) {
+        printf("%d e %d sao consecutivos\n", n1, n2);
+    }
+
+    if (n3 == n2 + 1) {
+        printf("%d e %d sao consecutivos\n", n2, n3);
+    }
+
+    if (n4 == n3 + 1) {
+        printf("%d e %d sao consecutivos\n", n3, n4);
+    }
+
+    if (n5 == n4 + 1) {
+        printf("%d e %d sao consecutivos\n", n4, n5);
+    }
+}
+
+
+void exercicioAds1() {
+
+    printf("EXERCICIO 1 \n");
+    float peso, altura, imc;
+
+    printf("Digite seu peso em kg: ");
+    scanf("%f", &peso);
+
+    printf("Digite sua altura em metros: ");
+    scanf("%f", &altura);
+
+    imc = peso / (altura * altura);
+
+    printf("Seu IMC e: %.2f\n", imc);
+
+    if (imc < 18.5) {
+        printf("Classificacao: Abaixo do peso");
+    }
+    else if (imc <= 24.9) {
+        printf("Classificacao: Normal");
+    }
+    else if (imc <= 29.9) {
+        printf("Classificacao: Acima do peso");
+    }
+    else {
+        printf("Classificacao: Obeso");
+    }
+}
+    
+
+void exercicioAds2() {
+
+    printf("EXERCICIO 2 \n");
+    int A = 6;
+    int B = 0;
+    int C = 0;
+
+    printf("Inicio: A = %d, B = %d, C = %d\n", A, B, C);
+
+    A = A - 1;
+    C = C + 1;
+    printf("A -> C: A = %d, B = %d, C = %d\n", A, B, C);
+
+    A = A - 2;
+    B = B + 2;
+    printf("A -> B: A = %d, B = %d, C = %d\n", A, B, C);
+
+    C = C - 1;
+    B = B + 1;
+    printf("C -> B: A = %d, B = %d, C = %d\n", A, B, C);
+
+    A = A - 3;
+    C = C + 3;
+    printf("A -> C: A = %d, B = %d, C = %d\n", A, B, C);
+
+    B = B - 1;
+    A = A + 1;
+    printf("B -> A: A = %d, B = %d, C = %d\n", A, B, C);
+
+    B = B - 2;
+    C = C + 2;
+    printf("B -> C: A = %d, B = %d, C = %d\n", A, B, C);
+
+    A = A - 1;
+    C = C + 1;
+    printf("A -> C: A = %d, B = %d, C = %d\n", A, B, C);
+}
+
+
+void menuProvaEsoftA() {
+
+    int exercicio;
+    printf("PROVA A\n");
+  
+    printf("0 - Exercicio 0\n");
+    printf("1 - Exercicio 1\n");
+    printf("2 - Exercicio 2\n");
+    printf("Escolha o exercicio: ");
+
+    scanf("%d", &exercicio);
+
+
+    switch (exercicio) {
+
+        case 0:
+            exercicioEsoftA0();
+            break;
+
+        case 1:
+            exercicioEsoftA1();
+            break;
+
+        case 2:
+            exercicioEsoftA2();
+            break;
+
+        default:
+            printf("Exercicio invalido!\n");
+    }
+}
+
+
+void menuProvaEsoftB() {
+
+    int exercicio;
+
+    printf("PROVA B\n");
+
+    printf("0 - Exercicio 0\n");
+    printf("1 - Exercicio 1\n");
+    printf("2 - Exercicio 2\n");
+    printf("Escolha o exercicio: ");
+
+    scanf("%d", &exercicio);
+
+
+    switch (exercicio) {
+
+        case 0:
+            exercicioEsoftB0();
+            break;
+
+        case 1:
+            exercicioEsoftB1();
+            break;
+
+        case 2:
+            exercicioEsoftB2();
+            break;
+
+        default:
+            printf("Exercicio invalido!\n");
+    }
+}
+
+void menuProvaAds() {
+
+    int exercicio;
+
+    printf("PROVA C\n");
+
+    printf("0 - Exercicio 0\n");
+    printf("1 - Exercicio 1\n");
+    printf("2 - Exercicio 2\n");
+    printf("Escolha o exercicio: ");
+
+    scanf("%d", &exercicio);
+
+
+    switch (exercicio) {
+
+        case 0:
+            exercicioAds0();
+            break;
+
+        case 1:
+            exercicioAds1();
+            break;
+
+        case 2:
+            exercicioAds2();
+            break;
+
+        default:
+            printf("Exercicio invalido!\n");
+    }
+}
+
+int main(int argc, char *argv[]) {
+
+    int prova;
+
+    printf("SISTEMA DE PROVAS\n");
+
+    printf("1 - Prova EsofA\n");
+    printf("2 - Prova EsoftB\n");
+    printf("3 - Prova Ads\n");
+
+    printf("Escolha a prova: ");
+    scanf("%d", &prova);
+
+    switch (prova) {
+
+        case 1:
+
+            menuProvaEsoftA();
+
+            break;
+
+
+        case 2:
+
+            menuProvaEsoftB();
+
+            break;
+
+
+        case 3:
+
+            menuProvaAds();
+
+            break;
+
+
+        default:
+
+            printf("\nProva invalida!\n");
+    }
+
+
+    return 0;
+}
