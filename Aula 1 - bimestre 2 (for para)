@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int valor[10];
+	int i, maior, menor;
+	//para (inicial; condição; incremento)
+	for(i=0; i<10; i++){
+		scanf("%d", &valor[i]);
+	}
+	return 0;
+}
