@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* Um programa que lei 10 números do teclado
+e identifique o maior entre os 5 primeros
+e o menor entre os restantes */
 
 int main(int argc, char *argv[]) {
 	int valor[10];
