@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int compara(int a, int b) {
+    if (a < b)
+        return b;
+    else
+        return a;
+}
+
+int menor(int a, int b) {
+    if (a < b)
+        return a;
+    else
+        return b;
+}
+
+
+int main(int argc, char *argv[]) {
+	int valores[10];
+    int maior, menorValor, i;
+
+    printf("Vamos ler os 10 valores:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &valores[i]);
+    }
+
+    // Maior entre os 5 primeiros
+    maior = valores[0];
+
+    for (i = 0; i < 4; i++) {
+        maior = compara(maior, valores[i + 1]);
+    }
+
+    // Menor entre os 5 restantes
+    menorValor = valores[5];
+
+    for (i = 6; i < 10; i++) {
+        menorValor = menor(menorValor, valores[i]);
+    }
+
+    printf("Maior entre os 5 primeiros: %d\n", maior);
+    printf("Menor entre os 5 restantes: %d\n", menorValor);
+
+    return 0;
+}
