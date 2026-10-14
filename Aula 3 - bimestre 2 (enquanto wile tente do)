@@ -1,0 +1,90 @@
+Explicação:
+ Enquanto(Chove){
+  print("Não vou dar aula")
+ -Enquanto Condição (testa para executar):
+wile (1){
+comando.....
+comando....
+}
+ -Tente (executa para testar):
+do {
+comando.....
+comando....
+} wile (1)
+   ^    ^
+ laço   condição
+
+Explicação funcionamento while e for:
+int main(int argc, char *argv[]) {
+	int valor[10], i, cont;
+	//mesmo funcionamento
+	for(i=0; i<10; i++){
+		scanf("%d", &valor[i]);
+	}
+	printf("Acabou o for");
+	i=0;
+	while (i<10){
+		scanf("%d", &valor[i]);
+		i++;
+	}
+
+Outro exemplo de usar o do e while:
+printf("Isira um valor par: ");
+	scanf("%d", &valor);
+	while (valor%2 == 1){
+		printf("O valor inserido e impar, \n insira um novo valor par: ");
+		scanf("%d", &valor);
+	}
+	do {
+		printf("Isira um valor par: ");
+		scanf("%d", &valor);
+	}while(valor%2 == 1);
+	
+	printf("A raiz de %d = %f", valor, sqrt(valor));
+
+Exemplo mostrando os valores usando também o do:
+int main(int argc, char *argv[]) {
+	int valor[10], i, cont;
+	//mesmo funcionamento
+	for(i=0; i<10; i++){
+		scanf("%d", &valor[i]);
+	}
+	i=0;
+	printf("Acabou o for");
+	printf("Iniciando o while");
+	while (i<10){
+		scanf("%d", &valor[i]);
+		i++;
+	}
+	do{
+		printf("%d", valor[i]);
+		i++;
+	}while(i<10);
+-----------------------------------------------------------------------------------------------------------------
+	
+Código da aula de hoje:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Elabore um programa que peça ao usuario para digitar 10 números que sejam 
+inteiros positivos, e ignorando os negativos. E mostre na tela o resultado da 
+soma e a média desses valores.
+-OBS: não precisa usar vetor, usem os laços da aula de hoje while e do-while*/
+
+int main(int argc, char *argv[]) {
+	int soma, n, i;
+	printf("Insira 10 numeros positivos: ");
+	i=0;
+  soma=0;
+	while(i<10){
+		scanf("%d", &n);
+		if(n>0){
+			soma += n;
+			i++;
+		}
+	}
+	printf("Soma = %d e media = %d", soma, (soma/10));
+	
+	return 0;
+}
