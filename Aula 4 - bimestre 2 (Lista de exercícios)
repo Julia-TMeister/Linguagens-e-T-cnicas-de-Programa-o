@@ -39,4 +39,41 @@ int main(int argc, char *argv[]) {
 */
 
 //Código da aula de hoje:
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Lista de Exercicíos  */
+
+int main(int argc, char *argv[]) {	
+	//EXERCÍCIO 1;
+	/*Elabore um programa que permita a entrada de três valores.
+	E controle do primeiro valor inserido até o segundo valor, com 
+	o passo da contagem dado pelo terceiro valor */
+	//ex: 1, 8, 2 >> contar de 1 a 8, com passo 2 = 3, 5, 7.
+	//Ex feito por mim, só conta para frente 
+	/*int v1, v2, v3, i;
+	printf("Digite o valor inicial da contagem e o valor final da contagem respectivamente: ");
+	scanf("%d %d", &v1, &v2);
+	printf("Digite o valor que vc quer que acontagem funcione: ");
+	scanf("%d", &v3);
+	for(i=v1; i<=v2; i+=v3){
+		printf("%d", i);
+	}*/
+	//Exercicio feito pelo prof 
+	
+	
+	//EXERCÍCIO 2;
+	/*Faça um programa que receba 1 número n e realize a soma dos
+	n primeiros termos da sequência definida [S = 1/2; 1/4; 1/8; 1/16...N]*/
+	
+	
+	
+	
+	
+	
+	//EXERCÍCIO 3;
+	/*Crie um programa que exiba na tela, o triângulo de pascal.*/
+	
+	return 0;
+}
 
