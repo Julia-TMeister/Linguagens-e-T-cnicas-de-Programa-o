@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Faça uma programa que leia uma palavra,
+e verifique se ela é um palíndromo
+
+Entrada: ABBA
+Saída: é um palíndromo 
+
+Um palíndromo é uma palavra, frase ou número que pode 
+ser lido da esquerda para a direita ou
+da direita para a esquerda,
+mantendo exatamente o mesmo sentido*/
+
+int main(int argc, char *argv[]) {
+	char palavra[30];
+	int i, j, palindromo;
+	scanf("%s", &palavra);
+	printf("Inserido %s", palavra);
+	printf("\n");
+	//Fim da string: \0
+	for (i=0; i<30 && palavra[i] != '\0'; i++);
+	for(j=i-1, i=0; i<j; i++, j--){
+		if (palavra[i]==palavra[j]) palindromo=1;
+		else palindromo=0;
+	}
+	if(palindromo) printf("Palindromo");
+	else printf("Nao e palindromo");
+
+	return 0;
+}
